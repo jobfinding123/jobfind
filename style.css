@@ -1,0 +1,176 @@
+/* Ընդհանուր էջի կարգավորումներ */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Վերևի մենյուն (Header) */
+header {
+    background-color: #1e272e;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav a {
+    color: #d2dae2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* Կանաչ կոճակը մենյուի մեջ */
+.btn-nav {
+    background-color: #2ecc71;
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-nav:hover {
+    background-color: #27ae60;
+}
+
+/* Գլխավոր կոնտեյներ */
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Աշխատանքի քարտերը (Job Cards) */
+.jobs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.job-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.job-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.job-card h3 {
+    margin-top: 0;
+    color: #1e272e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.badge-type {
+    background-color: #3498db;
+    color: white;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- ՖՈՐՄԱՆԵՐԻ ԳԵՂԵՑԿԱՑՈՒՄԸ (ԼՐԱՑՆԵԼՈՒ ԱՂՅՈՒՍԱԿՆԵՐ) --- */
+
+.form-container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 25px;
+    color: #1e272e;
+    font-size: 24px;
+}
+
+/* Բոլոր input-ները, select-ները ու textarea-ն */
+.form-container input, 
+.form-container select, 
+.form-container textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 1px solid #ccd1d9;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box; /* Որպեսզի padding-ը չխախտի չափսերը */
+    font-family: inherit;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Երբ սեղմում ենք լրացվող դաշտի վրա (Focus էֆեկտ) */
+.form-container input:focus, 
+.form-container select:focus, 
+.form-container textarea:focus {
+    border-color: #3498db;
+    background-color: white;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Ֆորմայի մեծ հաստատման կոճակը */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #1e272e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-submit:hover {
+    background-color: #2f3640;
+}
+
+.btn-submit:active {
+    transform: scale(0.98); /* Սեղմելիս թեթև հետ կգնա */
+}
+
+.form-container p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.form-container p a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-container p a:hover {
+    text-decoration: underline;
+}

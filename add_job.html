@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <title>Ավելացնել Աշխատանք</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Ավելացնել Նոր Հայտարարություն</h2>
+        <form method="POST">
+            <input type="text" name="title" placeholder="Աշխատանքի անվանում (օր.՝ Python Dev)" required><br><br>
+            <input type="text" name="company" placeholder="Ընկերության անուն" required><br><br>
+            <input type="text" name="salary" placeholder="Աշխատավարձ (օր.՝ 600,000 AMD)" required><br><br>
+            
+            <select name="job_type" required>
+                <option value="" disabled selected>Ընտրեք Գրաֆիկը</option>
+                <option value="Full-time">Full-time (Լրիվ դրույք)</option>
+                <option value="Part-time">Part-time (Կես դրույք)</option>
+                <option value="Remote">Remote (Հեռավար)</option>
+            </select><br><br>
+
+            <select name="category" required>
+                <option value="" disabled selected>Ընտրեք Կատեգորիան</option>
+                <option value="Ծրագրավորում">Ծրագրավորում</option>
+                <option value="Դիզայն">Դիզայն</option>
+                <option value="Մարքեթինգ">Մարքեթինգ</option>
+            </select><br><br>
+
+            <select name="experience" required>
+                <option value="" disabled selected>Փորձառության Մակարդակ</option>
+                <option value="Junior">Junior</option>
+                <option value="Middle">Middle</option>
+                <option value="Senior">Senior</option>
+            </select><br><br>
+
+            <textarea name="description" placeholder="Աշխատանքի նկարագրություն և պահանջներ..." rows="5" required></textarea><br><br>
+            
+            <button type="submit" class="btn-submit">Հրապարակել</button>
+        </form>
+        <p><a href="/">Վերադառնալ Գլխավոր էջ</a></p>
+    </div>
+</body>
+</html>

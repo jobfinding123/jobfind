@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <title>Գրանցում</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Գրանցվել Հարթակում</h2>
+        <form method="POST">
+            <input type="text" name="full_name" placeholder="Անուն Ազգանուն" required><br><br>
+            <input type="email" name="email" placeholder="Էլ. հասցե (Email)" required><br><br>
+            <input type="tel" name="phone" placeholder="Հեռախոսահամար (օր.՝ 094112233)" 
+            pattern="^(0|\+374)[1-9][0-9]{7}$" 
+            title="Խնդրում ենք գրել ճիշտ հեռախոսահամար, օրինակ՝ 094112233 կամ +37494112233" 
+            required><br><br>
+            <hr style="border: 0.5px solid #eee; margin: 20px 0;">
+            
+            <input type="text" name="username" placeholder="Օգտանուն (Username)" required><br><br>
+            <input type="password" name="password" placeholder="Գաղտնաբառ" required><br><br>
+            
+            <button type="submit" class="btn-submit">Գրանցվել</button>
+        </form>
+        <p>Արդեն ունե՞ք հաշիվ: <a href="/login">Մուտք գործեք</a></p>
+    </div>
+</body>
+</html>

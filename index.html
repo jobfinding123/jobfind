@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <title>Աշխատանքի Հայտարարություններ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Աշխատանքի Փնտրման Հարթակ</h1>
+        <nav>
+            <a href="/" class="nav-link" style="color: white; margin-right: 15px; text-decoration: none;">Գլխավոր</a>
+            {% if session.get('user') %}
+                <span style="color: #27ae60; margin-right: 15px;">Ողջույն, {{ session['user'] }}!</span>
+                <a href="/add_job" class="btn-nav">Ավելացնել Աշխատանք</a>
+                <a href="/logout" style="color: #e74c3c; margin-left: 15px; text-decoration: none;">Ելք</a>
+            {% else %}
+                <a href="/login" style="color: white; margin-right: 15px; text-decoration: none;">Մուտք</a>
+                <a href="/register" class="btn-nav">Գրանցվել</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Առկա Աշխատանքները</h2>
+        <div class="jobs-list">
+            {% for job in jobs %}
+                <div class="job-card">
+                    <h3>{{ job.title }} <span class="badge-type">{{ job.job_type }}</span></h3>
+                    <p><strong>Ընկերություն:</strong> {{ job.company }}</p>
+                    <p><strong>Աշխատավարձ:</strong> {{ job.salary }}</p>
+                    <p><strong>Ոլորտ:</strong> {{ job.category }} | <strong>Մակարդակ:</strong> {{ job.experience }}</p> 
+                    <hr style="border: 0.5px solid #eee;">
+                    <p>{{ job.description }}</p>
+                </div>
+            {% else %}
+                <p>Այս պահին հայտարարություններ չկան:</p>
+            {% endfor %}
+        </div>
+    </main>
+
+</body>
+</html>
